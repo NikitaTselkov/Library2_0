@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Library2_0.Styles">
+
+    <Color x:Key="ColorC">#5C0060</Color>
+    <SolidColorBrush  x:Key="CSharpColor" x:Name="CSharpColor" Color="{StaticResource ColorC}" />
+
+    <Color x:Key="ColorC2">#7D008C</Color>
+    <SolidColorBrush x:Key="CSharpColor2" Color="{StaticResource ColorC2}" />
+
+    <Color x:Key="ColorC3">#C570D3</Color>
+    <SolidColorBrush x:Key="CSharpColor3" Color="{StaticResource ColorC3}" />
+
+    <Color x:Key="ColorWPF">#087B15</Color>
+    <SolidColorBrush x:Key="WPFColor" Color="{StaticResource ColorWPF}" />
+
+    <Color x:Key="ColorWPF2">#21D339</Color>
+    <SolidColorBrush x:Key="WPFColor2" Color="{StaticResource ColorWPF2}" />
+
+    <Color x:Key="ColorWPF3">#5CF069</Color>
+    <SolidColorBrush x:Key="WPFColor3" Color="{StaticResource ColorWPF3}" />
+
+    <Color x:Key="ColorWEB">#8E7D00</Color>
+    <SolidColorBrush x:Key="WEBCollor" Color="{StaticResource ColorWEB}" />
+
+    <Color x:Key="ColorWEB2">#CAB31F</Color>
+    <SolidColorBrush x:Key="WEBCollor2" Color="{StaticResource ColorWEB2}" />
+
+    <Color x:Key="ColorWEB3">#E9D54D</Color>
+    <SolidColorBrush x:Key="WEBCollor3" Color="{StaticResource ColorWEB3}" />
+
+
+</ResourceDictionary>
