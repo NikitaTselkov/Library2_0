@@ -23,11 +23,11 @@
 
         <Grid Background="{StaticResource CSharpColor}" Grid.ColumnSpan="2">
             <Button Content="C#" Style="{StaticResource Back}" Click="ButtonBack" />
-            <!--<Button x:Name="ButtonMenu" Style="{StaticResource ButtonMenuStyle}">
+            <Button x:Name="ButtonMenu" Style="{StaticResource ButtonSlider}">
                 <Viewbox>
                     <Image Source="{StaticResource Menu1}" />
                 </Viewbox>
-            </Button>-->
+            </Button>
         </Grid>
 
         <Grid Background="{StaticResource CSharpColor2}" Grid.Row="2">

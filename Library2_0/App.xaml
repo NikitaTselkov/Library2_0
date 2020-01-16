@@ -14,7 +14,9 @@
                 <ResourceDictionary Source="Styles\Colors.xaml" />
                 <ResourceDictionary Source="Styles\Buttons.xaml" />
                 <ResourceDictionary Source="Styles\ButtonBack.xaml" />
-                <ResourceDictionary Source="Styles\MenuSlider.xaml" />
+                <ResourceDictionary Source="Styles\ButtonSliderPanel.xaml" />
+                
+
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

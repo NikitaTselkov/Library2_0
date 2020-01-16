@@ -8,6 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageWEB">
 
+    
+
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180"/>
@@ -20,7 +22,12 @@
 
         <Grid Background="{StaticResource WEBCollor}" Grid.ColumnSpan="2">
             <Button Content="WEB" Style="{StaticResource Back}" Click="ButtonBack"/>
-            
+            <Button Click="Button_Click" Style="{StaticResource ButtonSlider}">
+                <Viewbox>
+                    <Image Source="{StaticResource Menu1}" />
+                </Viewbox>
+            </Button>
+
         </Grid>
         
         <StackPanel Background="{StaticResource WEBCollor2}" Grid.Row="2">
@@ -32,6 +39,10 @@
             
         </Grid>
 
-        
+        <StackPanel x:Name="SliderPanel" Grid.Row="2">
+            <Button Content="test" Height="55" Width="180" Margin="0 5 0 0"  />
+
+        </StackPanel>
+
     </Grid>
 </Page>
