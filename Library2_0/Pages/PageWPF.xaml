@@ -21,7 +21,7 @@
 
         <Grid Background="{StaticResource WPFColor}" Grid.ColumnSpan="2">
             <Button Content="WPF" Style="{StaticResource Back}" Click="ButtonBack" />
-            <Button x:Name="ButtonMenu" Style="{StaticResource ButtonSlider}">
+            <Button Click="Button_Click" Style="{StaticResource ButtonSlider}">
                 <Viewbox>
                     <Image Source="{StaticResource Menu1}" />
                 </Viewbox>
@@ -35,7 +35,12 @@
         <Grid Background="{StaticResource WPFColor3}" Grid.Column="1" Grid.Row="2" >
 
         </Grid>
-        
+
+        <StackPanel x:Name="SliderPanel" Grid.Row="2">
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" />
+
+        </StackPanel>
+
     </Grid>
     
 </Page>

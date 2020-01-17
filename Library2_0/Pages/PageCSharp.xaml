@@ -23,7 +23,7 @@
 
         <Grid Background="{StaticResource CSharpColor}" Grid.ColumnSpan="2">
             <Button Content="C#" Style="{StaticResource Back}" Click="ButtonBack" />
-            <Button x:Name="ButtonMenu" Style="{StaticResource ButtonSlider}">
+            <Button Click="Button_Click" Style="{StaticResource ButtonSlider}">
                 <Viewbox>
                     <Image Source="{StaticResource Menu1}" />
                 </Viewbox>
@@ -38,6 +38,10 @@
 
         </Grid>
 
+        <StackPanel x:Name="SliderPanel" Grid.Row="2">
+            <Button Content="test" Style="{StaticResource ButtonFromPanel}"  />
+
+        </StackPanel>
 
     </Grid>
 

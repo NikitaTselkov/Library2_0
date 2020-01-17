@@ -21,11 +21,15 @@ namespace Library2_0.Pages
     /// </summary>
     public partial class PageWPF : Page
     {
+        private bool IsCheck { get; set; } = true;
+
         public PageWPF()
         {
             InitializeComponent();
 
             DataContext = new ViewModels.MainPages();
+
+            SliderPanel.Margin = new Thickness(0, 0, 180, 0);
         }
         public void ButtonBack(object sender, RoutedEventArgs e)
         {
@@ -34,7 +38,37 @@ namespace Library2_0.Pages
 
         }
 
-        
+        public async Task<bool> Metod1()
+        {
+            for (int i = 181; i > 0; i = i - 10)
+            {
+                SliderPanel.Margin = new Thickness(0, 0, i, 0);
+                await Task.Delay(1);
+            }
+            return IsCheck = false;
+        }
+
+        public async Task<bool> Metod2()
+        {
+            for (int i = 0; i < 181; i = i + 10)
+            {
+                SliderPanel.Margin = new Thickness(0, 0, i, 0);
+                await Task.Delay(1);
+            }
+            return IsCheck = true;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsCheck == false)
+            {
+                Metod2();
+            }
+            else
+            {
+                Metod1();
+            }
+        }
 
     }
 }

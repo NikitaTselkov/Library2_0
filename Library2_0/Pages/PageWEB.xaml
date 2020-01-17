@@ -40,7 +40,10 @@
         </Grid>
 
         <StackPanel x:Name="SliderPanel" Grid.Row="2">
-            <Button Content="test" Height="55" Width="180" Margin="0 5 0 0"  />
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" />
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" />
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" />
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" />
 
         </StackPanel>
 

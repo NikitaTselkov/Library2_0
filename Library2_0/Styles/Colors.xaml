@@ -30,4 +30,11 @@
     <SolidColorBrush x:Key="WEBCollor3" Color="{StaticResource ColorWEB3}" />
 
 
+
+    <Color x:Key="ColorButton">#FFFFFF</Color>
+    <SolidColorBrush x:Key="ColorWEB4" Color="{StaticResource ColorButton}" />
+
+    <Color x:Key="ColorButton2">#F05025</Color>
+    <SolidColorBrush x:Key="ColorWEB5" Color="{StaticResource ColorWEBButton2}" />
+
 </ResourceDictionary>
