@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using Library2_0.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,13 +65,34 @@ namespace Library2_0.Pages
         {
             if (IsCheck == false)
             {
+                ContentPanel.Margin = new Thickness(0, 0, 0, 0);
+
                 Metod2();
             }
             else
             {
+                ContentPanel.Margin = new Thickness(0, 250, 0, 0);
+
                 Metod1();
             }
         }
 
+
+
+        private void Button_Add(object sender, RoutedEventArgs e)
+        {
+            windows.WindowAdd add = new windows.WindowAdd();
+
+            add.Show();
+
+        }
+
+        private void Button_Delet(object sender, RoutedEventArgs e)
+        {
+            windows.Delet delet = new windows.Delet();
+
+            delet.Show();
+
+        }
     }
 }

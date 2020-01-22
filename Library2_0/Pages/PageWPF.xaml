@@ -37,7 +37,10 @@
         </Grid>
 
         <StackPanel x:Name="SliderPanel" Grid.Row="2">
-            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" />
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" Foreground="{StaticResource WPFColor}"/>
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" Foreground="{StaticResource WPFColor}"/>
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" Foreground="{StaticResource WPFColor}"/>
+            <Button Content="test"  Style="{StaticResource ButtonFromPanel}" Foreground="{StaticResource WPFColor}"/>
 
         </StackPanel>
 
