@@ -33,6 +33,15 @@
         <Grid Background="{StaticResource CSharpColor2}" Grid.Row="2">
             <StackPanel x:Name="ContentPanel">
                 <Button Style="{StaticResource ButtonFromPanel}" Content="int" x:Name="test"/>
+
+                <ItemsControl ItemsSource="{Binding Buttons}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding Content}" Tag="{Binding Id}" Command="{Binding Command}" Style="{StaticResource ButtonFromPanel}" Click="what"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
             </StackPanel>
         </Grid>
 
@@ -58,6 +67,14 @@
             <Button Content="test" Style="{StaticResource ButtonFromPanel}" Foreground="{StaticResource CSharpColor}" />
 
         </StackPanel>
+
+
+
+      
+            
+            
+       
+
 
     </Grid>
 

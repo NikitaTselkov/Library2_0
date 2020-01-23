@@ -1,7 +1,13 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿using DevExpress.Mvvm;
+using DevExpress.Mvvm.Native;
+using DocumentFormat.OpenXml.Office2010.Excel;
+using GalaSoft.MvvmLight.Command;
 using Library2_0.Models;
+using Library2_0.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,16 +28,50 @@ namespace Library2_0.Pages
     /// </summary>
     public partial class PageCSharp : Page
     {
+
+
+        public ObservableCollection<ButtonViewModel> Buttons { get; set; } = new ObservableCollection<ButtonViewModel>();
+      
+        public ObservableCollection<ButtonViewModel> buttonViews
+        {
+            get { return Buttons; }
+            set { Buttons = value; }
+        }
+
         private bool IsCheck { get; set; } = true;
 
+      
         public PageCSharp()
         {
             InitializeComponent();
 
-            DataContext = new ViewModels.MainPages();
+            DataContext = this;
+
 
             SliderPanel.Margin = new Thickness(0, 0, 180, 0);
+
+            var Info = GetInformation();
+
+            foreach (var info in Info)
+            {
+               
+                Buttons.Add(new ButtonViewModel(info.Name, info.Id, info.This, info.Code));
+               
+            }
+            
         }
+
+        
+        private static List<information> GetInformation()
+        {
+            var context = new MyDbContext();
+
+            var info = context.informations.ToList();
+
+            return info;
+        }
+
+
 
         public void ButtonBack(object sender, RoutedEventArgs e)
         {
@@ -92,7 +132,23 @@ namespace Library2_0.Pages
             windows.Delet delet = new windows.Delet();
 
             delet.Show();
+            
+        }
+       
+        public void what(object sender, RoutedEventArgs e)
+        {
+
+            Button btn = (Button)sender;
+            int Fio = (int)btn.Tag;
+            MessageBox.Show($"{Fio}");
+
+            var i = buttonViews[Fio - 1];
+
+            _this.Text = i.This;
+            _code.Text = i.Code;
 
         }
+
+        
     }
 }
