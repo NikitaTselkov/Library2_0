@@ -21,27 +21,56 @@
         </Grid.RowDefinitions>
 
         <Grid Background="{StaticResource WEBCollor}" Grid.ColumnSpan="2">
-            <Button Content="WEB" Style="{StaticResource Back}" Click="ButtonBack"/>
-            <Button Click="Button_Click" Style="{StaticResource ButtonSlider}">
-                <Viewbox>
-                    <Image Source="{StaticResource Menu1}" />
-                </Viewbox>
-            </Button>
-
+            
+                <Button Content="WEB" Style="{StaticResource Back}" Click="ButtonBack"/>
+                <Button Click="Button_Click" Style="{StaticResource ButtonSlider}">
+                    <Viewbox>
+                        <Image Source="{StaticResource Menu1}" />
+                    </Viewbox>
+                </Button>
+            
         </Grid>
         
-        <StackPanel Background="{StaticResource WEBCollor2}" Grid.Row="2">
+        <Grid Background="{StaticResource WEBCollor2}" Grid.Row="2">
+            <ScrollViewer  VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="ContentPanel">
+                    <Button Style="{StaticResource ButtonFromPanel}" Content="int" x:Name="test"/>
 
-        </StackPanel>
+                    <ItemsControl ItemsSource="{Binding Buttons}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding Content}" Tag="{Binding Id}" Command="{Binding Command}" Style="{StaticResource ButtonFromPanel}" Click="what"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
 
        
         <Grid Background="{StaticResource WEBCollor3}" Grid.Column="1" Grid.Row="2" >
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="MainContent" Grid.ColumnSpan="1" Background="Bisque" Margin="5">
+                <ScrollViewer  VerticalScrollBarVisibility="Hidden">
+
+                    <TextBlock Margin="5" Text="int - дает переменной тип челочисленного числа" FontSize="30" TextWrapping="Wrap" x:Name="_this" />
+                    
+                </ScrollViewer>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Background="#1E1E1E">
+                <ScrollViewer  VerticalScrollBarVisibility="Hidden">
+                    <TextBlock Text="int i = 10;" FontSize="30" Foreground="#3987D6" Margin="5" x:Name="_code" />
+                </ScrollViewer>
+            </StackPanel>
         </Grid>
 
         <StackPanel x:Name="SliderPanel" Grid.Row="2">
-            <Button Content="test"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}"/>
-            <Button Content="test"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}"/>
+            <Button Content="Add"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}" Click="Button_Add"/>
+            <Button Content="Delet"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}" Click="Button_Delet"/>
             <Button Content="test"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}"/>
             <Button Content="test"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}"/>
             

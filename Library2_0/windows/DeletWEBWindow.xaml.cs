@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Library2_0.windows
 {
     /// <summary>
-    /// Логика взаимодействия для Delet.xaml
+    /// Логика взаимодействия для DeletWEBWindow.xaml
     /// </summary>
-    public partial class Delet : Window
+    public partial class DeletWEBWindow : Window
     {
-        public Delet()
+        public DeletWEBWindow()
         {
             InitializeComponent();
-            
         }
 
         private static void List(TextBlock text)
@@ -34,14 +33,14 @@ namespace Library2_0.windows
             foreach (var info in Info)
             {
                 text.Text += $"Id: {info.Id}, {info.Name}, {info.This}, {info.Code} \n";
-                
+
             }
-            
+
         }
 
         private static List<information> GetInformation()
         {
-            var context = new MyDbContext();
+            var context = new MyDbContext2();
 
             var info = context.informations.ToList();
 
@@ -50,8 +49,8 @@ namespace Library2_0.windows
 
         private static void Remove(TextBox box)
         {
-           int _box = Convert.ToInt32(box.Text);
-            using (MyDbContext myDb = new MyDbContext())
+            int _box = Convert.ToInt32(box.Text);
+            using (MyDbContext2 myDb = new MyDbContext2())
             {
 
                 var item = myDb.informations.Find(_box);
@@ -67,7 +66,7 @@ namespace Library2_0.windows
         private static void Edit(TextBox box, TextBox boxN, TextBox boxT, TextBox boxC)
         {
             int _box = Convert.ToInt32(box.Text);
-            using (MyDbContext myDb = new MyDbContext())
+            using (MyDbContext2 myDb = new MyDbContext2())
             {
 
                 var item = myDb.informations.Find(_box);
@@ -96,5 +95,6 @@ namespace Library2_0.windows
         {
             Edit(TextBoxId, TextName, TextThis, TextCode);
         }
+
     }
 }

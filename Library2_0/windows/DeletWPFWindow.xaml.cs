@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Library2_0.windows
 {
     /// <summary>
-    /// Логика взаимодействия для Delet.xaml
+    /// Логика взаимодействия для DeletWPFWindow.xaml
     /// </summary>
-    public partial class Delet : Window
+    public partial class DeletWPFWindow : Window
     {
-        public Delet()
+        public DeletWPFWindow()
         {
             InitializeComponent();
-            
         }
 
         private static void List(TextBlock text)
@@ -33,15 +32,16 @@ namespace Library2_0.windows
             text.Text = "";
             foreach (var info in Info)
             {
-                text.Text += $"Id: {info.Id}, {info.Name}, {info.This}, {info.Code} \n";
                 
+                text.Text += $"Id: {info.Id}, {info.Name}, {info.This}, {info.Code} \n";
+
             }
-            
+
         }
 
         private static List<information> GetInformation()
         {
-            var context = new MyDbContext();
+            var context = new MyDbContext3();
 
             var info = context.informations.ToList();
 
@@ -50,8 +50,8 @@ namespace Library2_0.windows
 
         private static void Remove(TextBox box)
         {
-           int _box = Convert.ToInt32(box.Text);
-            using (MyDbContext myDb = new MyDbContext())
+            int _box = Convert.ToInt32(box.Text);
+            using (MyDbContext3 myDb = new MyDbContext3())
             {
 
                 var item = myDb.informations.Find(_box);
@@ -67,7 +67,7 @@ namespace Library2_0.windows
         private static void Edit(TextBox box, TextBox boxN, TextBox boxT, TextBox boxC)
         {
             int _box = Convert.ToInt32(box.Text);
-            using (MyDbContext myDb = new MyDbContext())
+            using (MyDbContext3 myDb = new MyDbContext3())
             {
 
                 var item = myDb.informations.Find(_box);

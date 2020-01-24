@@ -107,12 +107,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\MyDbContext2.cs" />
+    <Compile Include="Models\MyDbContext3.cs" />
     <Compile Include="ViewModels\ButtonViewModels.cs" />
+    <Compile Include="windows\DeletWEBWindow.xaml.cs">
+      <DependentUpon>DeletWEBWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\DeletWindow.xaml.cs">
       <DependentUpon>DeletWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="windows\DeletWPFWindow.xaml.cs">
+      <DependentUpon>DeletWPFWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\WindowAdd.xaml.cs">
       <DependentUpon>WindowAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\WindowAddWPF.xaml.cs">
+      <DependentUpon>WindowAddWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\WindowWEBAdd.xaml.cs">
+      <DependentUpon>WindowWEBAdd.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\Buttons.xaml">
       <SubType>Designer</SubType>
@@ -179,11 +193,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="windows\DeletWEBWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="windows\DeletWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="windows\DeletWPFWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="windows\WindowAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\WindowAddWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\WindowWEBAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

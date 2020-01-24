@@ -140,7 +140,7 @@ namespace Library2_0.Pages
 
             Button btn = (Button)sender;
             int Fio = (int)btn.Tag;
-            MessageBox.Show($"{Fio}");
+           
 
             var i = buttonViews[Fio - 1];
 

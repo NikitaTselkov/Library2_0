@@ -31,18 +31,20 @@
         </Grid>
 
         <Grid Background="{StaticResource CSharpColor2}" Grid.Row="2">
-            <StackPanel x:Name="ContentPanel">
-                <Button Style="{StaticResource ButtonFromPanel}" Content="int" x:Name="test"/>
+            <ScrollViewer  VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="ContentPanel">
+                    <Button Style="{StaticResource ButtonFromPanel}" Content="int" x:Name="test"/>
 
-                <ItemsControl ItemsSource="{Binding Buttons}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Button Content="{Binding Content}" Tag="{Binding Id}" Command="{Binding Command}" Style="{StaticResource ButtonFromPanel}" Click="what"/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                    <ItemsControl ItemsSource="{Binding Buttons}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding Content}" Tag="{Binding Id}" Command="{Binding Command}" Style="{StaticResource ButtonFromPanel}" Click="what"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
 
-            </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
 
         <Grid Background="{StaticResource CSharpColor3}" Grid.Column="1" Grid.Row="2" >
@@ -50,14 +52,19 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel x:Name="MainContent" Grid.ColumnSpan="1" Background="Bisque" Margin="5">
-                
-                    <TextBlock Margin="5" Text="int - дает переменной тип челочисленного числа" FontSize="30" TextWrapping="Wrap" x:Name="_this" />
-               
-            </StackPanel>
+            <ScrollViewer  VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="MainContent" Grid.ColumnSpan="1" Background="Bisque" Margin="5">
+
+                    <TextBlock Margin="5" Text="int - дает переменной тип челочисленного числа   int - дает переменной тип челочисленного числаint - дает переменной тип челочисленного числаint - дает переменной тип челочисленного числа" FontSize="30" TextWrapping="Wrap" x:Name="_this" />
+
+                </StackPanel>
+            </ScrollViewer>
             <StackPanel Grid.Column="2" Background="#1E1E1E">
-                <TextBlock Text="int i = 10;" FontSize="30" Foreground="#3987D6" Margin="5" x:Name="_code" />
+                <ScrollViewer  VerticalScrollBarVisibility="Hidden">
+                    <TextBlock Text="int i = 10;" FontSize="30" Foreground="#3987D6" Margin="5" x:Name="_code" />
+                </ScrollViewer>
             </StackPanel>
+            
         </Grid>
 
         <StackPanel x:Name="SliderPanel" Grid.Row="2">
