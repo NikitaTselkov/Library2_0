@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="WindowAdd" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <TextBox Text="Name" Margin="5" FontSize="30" x:Name="_name" />
-            <TextBox Text="this" Margin="5" FontSize="30" x:Name="_this" />
-            <TextBox Text="code" Margin="5" FontSize="30" x:Name="_code" />
+        <StackPanel Background="{StaticResource CSharpColor2}">
+            <Label Content="Name:" FontSize="15" />
+            <TextBox  Margin="5" FontSize="30" x:Name="_name" Style="{StaticResource TextBoxStyle}" Background="{StaticResource CSharpColor3}"/>
+            <Label Content="This:" FontSize="15" />
+            <TextBox Margin="5" FontSize="30" x:Name="_this" Style="{StaticResource TextBoxStyle}" Background="{StaticResource CSharpColor3}" />
+            <Label Content="Code:" FontSize="15" />
+            <TextBox Margin="5" FontSize="30" x:Name="_code" Style="{StaticResource TextBoxStyle}" Background="{StaticResource CSharpColor3}"/>
+            
 
-            <Button Content="Add" Click="Button_Add" FontSize="25" x:Name="AddButton" />
+            <Button Content="Add" Click="Button_Add" FontSize="25" x:Name="AddButton" Background="White" />
         </StackPanel>
     </Grid>
 </Window>

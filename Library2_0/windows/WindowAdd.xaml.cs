@@ -48,7 +48,9 @@ namespace Library2_0.windows
         private void Button_Add(object sender, RoutedEventArgs e)
         {
             Add(_name, _this, _code);
-            
+            _name.Text = "";
+            _this.Text = "";
+            _code.Text = "";
         }
     }
 }

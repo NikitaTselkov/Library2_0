@@ -108,7 +108,7 @@ namespace Library2_0.Pages
             }
             else
             {
-                ContentPanel.Margin = new Thickness(0, 250, 0, 0);
+                ContentPanel.Margin = new Thickness(0, 215, 0, 0);
 
                 Metod1();
             }
@@ -146,6 +146,66 @@ namespace Library2_0.Pages
 
         }
 
-        
+        private void Button_Find(object sender, RoutedEventArgs e)
+        {
+            var Find = FindBox.Text;
+
+            var Info = GetInformation();
+
+            var Number = 0;
+
+            string ValueName = null;
+            string ValueCode = null;
+            string ValueThis = null;
+
+            
+
+            foreach (var info in Info)
+            {
+                Number += 1;
+
+                ValueName = info.Name;
+                ValueThis = info.This;
+                ValueCode = info.Code;
+
+                string[] wordName = ValueName.Split(' ');
+                string[] wordCode = ValueCode.Split(' ');
+                string[] wordThis = ValueThis.Split(' ');
+
+                foreach (var info2 in wordName)
+                {
+                    if (info2 == Find)
+                    {
+                        var i = buttonViews[Number - 1];
+
+                        _this.Text = i.This;
+                        _code.Text = i.Code;
+                    }
+                }
+                foreach (var info2 in wordCode)
+                {
+                    if (info2 == Find)
+                    {
+                        var i = buttonViews[Number - 1];
+
+                        _this.Text = i.This;
+                        _code.Text = i.Code;
+                    }
+                }
+                foreach (var info2 in wordThis)
+                {
+                    if (info2 == Find)
+                    {
+                        var i = buttonViews[Number - 1];
+
+                        _this.Text = i.This;
+                        _code.Text = i.Code;
+                    }
+                }
+
+              
+            }
+
+        }
     }
 }

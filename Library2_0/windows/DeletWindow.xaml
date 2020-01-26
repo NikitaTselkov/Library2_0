@@ -8,11 +8,11 @@
         Title="DeletWindow" Height="450" Width="800">
     <Grid>
         <ScrollViewer  VerticalScrollBarVisibility="Hidden">
-            <StackPanel>
+            <StackPanel Background="{StaticResource CSharpColor3}">
                 <Border MaxHeight="370">
                     <ScrollViewer VerticalScrollBarVisibility="Hidden">
 
-                        <TextBlock x:Name="_textblock" Text="test" FontSize="30" Margin="5"/>
+                        <TextBlock x:Name="_textblock" Text="DataBase" FontSize="30" Margin="5" Background="{StaticResource CSharpColor2}"/>
 
                     </ScrollViewer>
                 </Border>
@@ -20,15 +20,15 @@
                     <Button Name="View" Click="View_Click" Content="View" Margin="5" FontSize="25" />
                     <Label Content="Введите id который хотите удалить или редактировать" HorizontalAlignment="Center" FontSize="20"/>
 
-                    <TextBox Text="" FontSize="30" x:Name="TextBoxId" />
+                    <TextBox Text="" FontSize="30" x:Name="TextBoxId" HorizontalContentAlignment="Center"/>
                     <Label Content="Name:" />
-                    <TextBox x:Name="TextName" FontSize="20" />
+                    <TextBox x:Name="TextName" FontSize="20" Background="{StaticResource CSharpColor2}" Style="{StaticResource TextBoxStyle}"  />
                     <Label Content="This:" />
-                    <TextBox x:Name="TextThis" FontSize="20" />
+                    <TextBox x:Name="TextThis" FontSize="20" Background="{StaticResource CSharpColor2}" Style="{StaticResource TextBoxStyle}"/>
                     <Label Content="Code:" />
-                    <TextBox x:Name="TextCode" FontSize="20"  />
-                    <Button Content="Edit" FontSize="30" Click="Button_Edit"/>
-                    <Button x:Name="DeletButton" Content="delet" FontSize="30" Margin="10" Click="Delet_Click" />
+                    <TextBox x:Name="TextCode" FontSize="20" Background="{StaticResource CSharpColor2}"  Style="{StaticResource TextBoxStyle}"/>
+                    <Button Content="Edit" FontSize="30" Click="Button_Edit" Margin="0 10 0 0" Width="100"/>
+                    <Button x:Name="DeletButton" Content="delet" FontSize="30" Margin="10" Width="100" Click="Delet_Click" />
                 </StackPanel>
 
             </StackPanel>

@@ -95,6 +95,10 @@ namespace Library2_0.windows
         private void Button_Edit(object sender, RoutedEventArgs e)
         {
             Edit(TextBoxId, TextName, TextThis, TextCode);
+            TextBoxId.Text = "";
+            TextName.Text = "";
+            TextThis.Text = "";
+            TextCode.Text = "";
         }
     }
 }

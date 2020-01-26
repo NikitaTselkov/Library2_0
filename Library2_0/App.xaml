@@ -16,6 +16,7 @@
                 <ResourceDictionary Source="Styles\ButtonBack.xaml" />
                 <ResourceDictionary Source="Styles\ButtonSliderPanel.xaml" />
                 <ResourceDictionary Source="Styles\ButtonsFromSlidePanel.xaml" />
+                <ResourceDictionary Source="Styles\Textbox.xaml" />
                 
 
 

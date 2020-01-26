@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Library2_0.Styles">
+
+    <Style TargetType="TextBox" x:Key="TextBoxStyle">
+        <Setter Property="MinHeight" Value="40" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+</ResourceDictionary>

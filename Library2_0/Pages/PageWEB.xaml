@@ -71,9 +71,8 @@
         <StackPanel x:Name="SliderPanel" Grid.Row="2">
             <Button Content="Add"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}" Click="Button_Add"/>
             <Button Content="Delet"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}" Click="Button_Delet"/>
-            <Button Content="test"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}"/>
-            <Button Content="test"  Style="{StaticResource ButtonFromPanel}"  Foreground="{StaticResource WEBCollor}"/>
-            
+            <Button Content="Find" Style="{StaticResource ButtonFromPanel}" Foreground="{StaticResource WEBCollor}" Click="Button_Find" />
+            <TextBox x:Name="FindBox" Margin="5" HorizontalContentAlignment="Center" FontSize="20" />
 
         </StackPanel>
 
