@@ -1,6 +1,8 @@
 ﻿using Library2_0.Models;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,8 @@ namespace Library2_0.windows
     /// </summary>
     public partial class DeletWEBWindow : Window
     {
+        
+
         public DeletWEBWindow()
         {
             InitializeComponent();
@@ -63,6 +67,9 @@ namespace Library2_0.windows
             }
         }
 
+        
+        
+
         private static void Edit(TextBox box, TextBox boxN, TextBox boxT, TextBox boxC)
         {
             int _box = Convert.ToInt32(box.Text);
@@ -82,15 +89,16 @@ namespace Library2_0.windows
         }
 
         private void View_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             List(_textblock);
+            
         }
 
         private void Delet_Click(object sender, RoutedEventArgs e)
         {
             Remove(TextBoxId);
+            
         }
-
         private void Button_Edit(object sender, RoutedEventArgs e)
         {
             Edit(TextBoxId, TextName, TextThis, TextCode);
@@ -100,5 +108,6 @@ namespace Library2_0.windows
             TextCode.Text = "";
         }
 
+        
     }
 }

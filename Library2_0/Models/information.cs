@@ -8,7 +8,9 @@ namespace Library2_0.Models
 {
     public class information
     {
-        public int Id { get; set; }
+        public int Id1 { get; set; }
+
+        public int Id { get; set; } 
 
         public string Name { get; set; }
 

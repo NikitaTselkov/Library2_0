@@ -35,6 +35,7 @@ namespace Library2_0.windows
                     Name = text1.Text,
                     This = text2.Text,
                     Code = text3.Text
+
                 };
                 context.informations.Add(info);
                 context.SaveChanges();

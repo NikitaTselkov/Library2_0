@@ -27,6 +27,7 @@ namespace Library2_0.Pages
     /// </summary>
     public partial class PageWEB : Page
     {
+        
         public ObservableCollection<ButtonViewModel> Buttons { get; set; } = new ObservableCollection<ButtonViewModel>();
 
         public ObservableCollection<ButtonViewModel> buttonViews
@@ -134,7 +135,7 @@ namespace Library2_0.Pages
 
         public void what(object sender, RoutedEventArgs e)
         {
-
+           
             Button btn = (Button)sender;
             int Fio = (int)btn.Tag;
             //MessageBox.Show($"{Fio}");

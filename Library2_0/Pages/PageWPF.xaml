@@ -31,8 +31,7 @@
         <Grid Background="{StaticResource WPFColor2}" Grid.Row="2">
             <ScrollViewer  VerticalScrollBarVisibility="Hidden">
                 <StackPanel x:Name="ContentPanel">
-                    <Button Style="{StaticResource ButtonFromPanel}" Content="int" x:Name="test"/>
-
+                   
                     <ItemsControl ItemsSource="{Binding Buttons}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
@@ -52,12 +51,12 @@
             </Grid.ColumnDefinitions>
             <StackPanel x:Name="MainContent" Grid.ColumnSpan="1" Background="Bisque" Margin="5">
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden">
-                    <TextBlock Margin="5" Text="int - дает переменной тип челочисленного числа" FontSize="30" TextWrapping="Wrap" x:Name="_this" />
+                    <TextBlock Margin="5" FontSize="30" TextWrapping="Wrap" x:Name="_this" />
                 </ScrollViewer>
             </StackPanel>
             <StackPanel Grid.Column="2" Background="#1E1E1E">
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden">
-                    <TextBlock Text="int i = 10;" FontSize="30" Foreground="#3987D6" Margin="5" x:Name="_code" />
+                    <TextBlock FontSize="30" Foreground="#3987D6" Margin="5" x:Name="_code" />
                 </ScrollViewer>
             </StackPanel>
         </Grid>

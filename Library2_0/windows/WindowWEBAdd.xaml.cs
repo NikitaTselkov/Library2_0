@@ -25,16 +25,20 @@ namespace Library2_0.windows
             InitializeComponent();
         }
 
+        
         public static void Add(TextBox text1, TextBox text2, TextBox text3)
         {
+            
             using (var context = new MyDbContext2())
             {
+
                 var info = new information()
                 {
 
                     Name = text1.Text,
                     This = text2.Text,
-                    Code = text3.Text
+                    Code = text3.Text,
+                    
                 };
                 context.informations.Add(info);
                 context.SaveChanges();
@@ -45,12 +49,15 @@ namespace Library2_0.windows
 
         }
 
+       
+
         private void Button_Add(object sender, RoutedEventArgs e)
         {
             Add(_name, _this, _code);
             _name.Text = "";
             _this.Text = "";
             _code.Text = "";
+            
         }
     }
 }
